@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    <script>
+
+        function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+        }
+
+        function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+        }
+
+        // Prompt sempre ler como texto com o ParseInt converte para número o retorno
+        var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+       var empates = parseInt(prompt("Entre com o número de empates."));
+
+         // JS converte para números, porém na concatenação(+) ele não converte
+         var pontos = vitorias  * 3 + empates;
+
+        mostra("Os pontos do seu time são " + pontos);
+
+        if(pontos > 28){
+            mostra("Seu time está melhor do que no ano passado");
+        }
+
+        if(pontos < 28){
+            mostra("Seu time está pior do que no ano passado");
+        }
+
+        if(pontos == 28){
+            mostra("Seu time está igual ao ano passado.");
+        }
+
+        mostra('FIM');
+       
+       
+        
+        
+        </script>
+</body>
+</html>

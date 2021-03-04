@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação com JS</title>
+</head>
+<body>
+    <!-- Tag para tela branca para poder desenhar -->
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        /* document.querySelector,getContext,fillRect são funções */
+       var tela = document.querySelector("canvas");
+       /* Contexto que terá na tela */
+       var pincel = tela.getContext('2d');
+
+       pincel.fillStyle = "lightgrey";
+       /* Preencha um retângulo 
+       0,0 -> x,y
+       600,400-> altura e largura
+       */
+       pincel.fillRect(0,0, 600,400);
+
+       pincel.fillStyle = "green";
+       pincel.fillRect(0,0,200,400);
+
+       /* 3*200 = 600 */
+       pincel.fillStyle = 'red';
+       pincel.fillRect(400,0,200,400);
+
+       pincel.fillStyle = 'yellow';
+       /* Qual caminho que o pincel vai fazer*/
+       pincel.beginPath();
+       /* x e y - mover para o meio da tela */
+       pincel.moveTo(300,200);
+       /* Fazer uma linha - x,y */
+       pincel.lineTo(200,400);
+       pincel.lineTo(400,400);
+       pincel.fill();
+
+       pincel.fillStyle = 'blue';
+       pincel.beginPath();
+       /* 300(x),200(y),50(tamanho do raio),ângulo inicial(0) e ângulo final em radianos(3.14), */
+       pincel.arc(300,200,50,0,2*3.14);
+       pincel.fill();
+       
+    </script>
+</body>
+</html>

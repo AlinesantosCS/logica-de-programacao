@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <script>
+
+        function pulaLinha() {
+    
+            document.write("<br>");
+            document.write("<br>");
+    
+        }
+    
+        function mostra(frase) {
+    
+            document.write(frase);
+            pulaLinha();
+    }
+    
+    // Os parâmetros deve ser o mesmo nome da fórmula
+        function calculaImc(peso,altura)   {
+            var imc = peso/ (altura * altura);
+            /* armazena o resultado o imc para ser retornado na var imcFlavio e imcAmigo */ 
+            return imc;
+           
+    }
+   // Na ordem dos parâmetros 
+    var imcFlavio = calculaImc(73,1.71);
+    var imcAmigo   = calculaImc(68,1.72);
+    
+    mostra(imcFlavio);
+    mostra(imcAmigo );
+
+    
+    </script>
+</body>
+</html>

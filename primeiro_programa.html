@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica</title>
+</head>
+<body>
+    <script>
+        alert("Pop-up JavaScript <3" + " com contatenação");
+
+        document.write(" A minha idade é "); // Escrever no documento HTML
+        document.write("23");
+        // Soma de texto com números
+        document.write("<br> A soma das idades é " + (20+10+30));
+
+        var ano = 2016;
+        document.write("<br> Emerson tem " + (ano - 1998) + " anos");
+
+        var idadeFlavio = 39;
+        var idadeJoaquim = 20;
+        var idadeBarney = 41;
+
+        var media = (idadeFlavio + idadeJoaquim + idadeBarney)/3;
+
+        // Math.round() -> Arrendedona o valor
+        document.write("<br> A média das idades é " + Math.round(media));
+
+
+        // var pularLinha = '<br><br>';
+        // document.write(pularLinha );
+        // document.write('lorem ipsum');
+        // document.write(pularLinha );
+        // document.write('lorem ipsum');
+        // document.write(pularLinha );
+        // document.write('lorem ipsum');
+
+        // Ao invés de repetir o document.write cria-se uma função
+        function pularLinha()   {
+            document.write("<br>");
+        }
+
+        pularLinha();
+        document.write('Aline');
+        pularLinha();
+        document.write('Alana');
+        pularLinha();
+        document.write('Amanda');
+
+        // ver = 'Mussum Ipsum, cacilds vidis litro abertis. Praesent '
+        function mostra(ver)   {
+            document.write(ver);
+            pularLinha();
+        }
+
+        pularLinha();
+       mostra('Mussum Ipsum, cacilds vidis litro abertis. Praesent ');
+      
+       mostra('malesuada urna nisi, quis volutpat erat hendrerit');
+       
+       mostra('non. Nam vulputate dapibus. Nec orci ornare ');
+       
+       mostra('consequat. Praesent lacinia ultrices consectetur.');
+
+
+       function mostrar(exibir)   {
+             pularLinha();
+            document.write(exibir);
+            pularLinha();
+        }
+       mostrar(" Nossa diferença de idade é " + (35-23));
+       
+       function mediaGeracao(revelar)   {
+             pularLinha();
+            document.write(revelar);
+            pularLinha();
+        }
+        var anoAtual = 2021;
+        var idadeMediaQuandoTemFilhos = 28;
+        var calculeGeracao = (anoAtual- 1500) / idadeMediaQuandoTemFilhos;
+
+        mediaGeracao(" Passaram " + Math.round(calculeGeracao)  + " gerações");
+
+
+    </script>
+</body>
+</html>

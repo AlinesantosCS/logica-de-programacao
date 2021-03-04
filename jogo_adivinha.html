@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo adivinha</title>
+</head>
+<body>
+    <script>
+
+        function pulaLinha() {
+    
+            document.write("<br>");
+            document.write("<br>");
+    }
+    
+        function mostra(frase) {
+    
+            document.write(frase);
+            pulaLinha();
+    }
+
+    function sorteia(n){
+      return  numeroPensado = Math.round(Math.random() * n);
+    }
+
+    var numeroPensado = sorteia(10);
+    // var numeroPensado = Math.round(Math.random() * 10);
+    
+    var tentativas = 1;
+
+    while(tentativas <= 3) {
+
+        var chute = parseInt(prompt("Digite seu chute!"));
+
+        if(chute == numeroPensado) {
+
+            mostra("Você acertou, o número pensado era " + numeroPensado);
+
+            break;
+        } else {
+
+            mostra("Você errou");
+        }
+
+        tentativas++;
+
+    }
+
+    mostra("FIM");
+
+    
+    </script>
+</body>
+</html>
